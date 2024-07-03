@@ -1,14 +1,10 @@
-import { bringData } from "../../services/api-calls";
-import "./button-data-call.css"
+import "./button-data-call.css";
 
-export const ButtonDataCall = ({ criteria }) => {
+export const ButtonDataCall = ({ criteria, emitFunction }) => {
   return (
-    <div className="button-design"
-      onClick={() => {
-        bringData(criteria)
-          .then((res) => console.log(res))
-          .catch((error) => console.log(error));
-      }}
+    <div
+      className="button-design"
+      onClick={() => emitFunction(criteria)}
     >
       {criteria}
     </div>
