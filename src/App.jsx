@@ -1,16 +1,14 @@
-
-import './App.css'
-import { Counter } from "./common/counter/counter"
+import "./App.css";
+import { ButtonDataCall } from "./common/button-data-call/button-data-call";
 
 function App() {
-
   return (
     <>
-      <Counter val={5}/>
-      <Counter val={10}/>
-      <Counter val={25}/>
+      <ButtonDataCall criteria="character" />
+      <ButtonDataCall criteria="location" />
+      <ButtonDataCall criteria="episode" />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
